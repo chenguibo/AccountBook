@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-// STL(Standard Template Library,±ê×¼Ä£°å¿â)
+// STL(Standard Template Library,æ ‡å‡†æ¨¡æ¿åº“)
 void line() {
 	cout << "--------------------" << endl;
 }
@@ -23,15 +23,15 @@ void test01(){
 	ve.push_back(30);
 	ve.push_back(40);
 
-	// µü´úÆ÷
+	// è¿­ä»£å™¨
 	vector<int>::iterator itBegin = ve.begin();
 	vector<int>::iterator itEnd = ve.end();
-	// µÚÒ»ÖÖ±éÀú
+	// ç¬¬ä¸€ç§éå†
 	while (itBegin != itEnd) {
 		cout << *itBegin << endl;
 		itBegin++;
 	}
-	// µÚ¶şÖÖ±éÀú
+	// ç¬¬äºŒç§éå†
 	for_each(ve.begin(), ve.end(), myPrint);
 
 	line();
@@ -49,11 +49,11 @@ public:
 };
 
 void myPrint2(Person p) {
-	cout << "ĞÕÃû£º" << p.m_Name << "\t" << "ÄêÁä£º" << p.m_age << endl;
+	cout << "å§“åï¼š" << p.m_Name << "\t" << "å¹´é¾„ï¼š" << p.m_age << endl;
 }
 
 void test02(){
-	// vector°üº¬×Ô¶¨ÒåÊı¾İÀàĞÍ
+	// vectoråŒ…å«è‡ªå®šä¹‰æ•°æ®ç±»å‹
 	line();
 	cout << "test02" << endl;
 	vector<Person> ve;
@@ -68,11 +68,11 @@ void test02(){
 	ve.push_back(p3);
 	ve.push_back(p4);
 
-	cout << "±éÀúÒ»£º" << endl;
+	cout << "éå†ä¸€ï¼š" << endl;
 	for (vector<Person>::iterator it = ve.begin(); it != ve.end();it++) {
-		cout << "ĞÕÃû£º" << (*it).m_Name << "\t" << "ÄêÁä£º" << (*it).m_age << endl;
+		cout << "å§“åï¼š" << (*it).m_Name << "\t" << "å¹´é¾„ï¼š" << (*it).m_age << endl;
 	}
-	cout << "±éÀú¶ş£º" << endl;
+	cout << "éå†äºŒï¼š" << endl;
 	for_each(ve.begin(), ve.end(), myPrint2);
 	line();
 }
@@ -82,6 +82,4 @@ int main() {
 	test02();
 	system("pause");
 	return 0;
-
-	// ÏÂ´Î¿´189¿Î
 }
