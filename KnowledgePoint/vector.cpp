@@ -19,43 +19,30 @@ void test01() {
 	line();
 	vector<int> ve(10, 0);
 
-	cout << "ÊÇ·ñÎª¿Õ£º" << ve.empty() << endl; // 0
-	cout << "ÈÝÁ¿¶àÉÙ£º" << ve.capacity() << endl; // 10
-	cout << "ÔªËØ¶àÉÙ£º" << ve.size() << endl; // 10
-	ve.resize(12); // ÖØÐÂÖ¸¶¨´óÐ¡Îª12
-	cout << "ÈÝÁ¿¶àÉÙ£º" << ve.capacity() << endl; // 15
-	cout << "ÔªËØ¶àÉÙ£º" << ve.size() << endl; // 12
+	cout << "æ˜¯å¦ä¸ºç©ºï¼š" << ve.empty() << endl; // 0
+	cout << "å®¹é‡å¤šå°‘ï¼š" << ve.capacity() << endl; // 10
+	cout << "å…ƒç´ å¤šå°‘ï¼š" << ve.size() << endl; // 10
+	ve.resize(12); // é‡æ–°æŒ‡å®šå¤§å°ä¸º12
+	cout << "å®¹é‡å¤šå°‘ï¼š" << ve.capacity() << endl; // 15
+	cout << "å…ƒç´ å¤šå°‘ï¼š" << ve.size() << endl; // 12
 
-	// ²åÈëÉ¾³ý
-	ve.insert(ve.begin(), 1000); // ²åÈëÒ»¸ö
+	// æ’å…¥åˆ é™¤
+	ve.insert(ve.begin(), 1000); // æ’å…¥ä¸€ä¸ª
 	printVector(ve);
-	ve.insert(ve.begin(), 2, 1000); // ²åÈëÁ½¸ö
+	ve.insert(ve.begin(), 2, 1000); // æ’å…¥ä¸¤ä¸ª
 	printVector(ve);
-	ve.erase(ve.begin()); // É¾³ýÒ»¸ö
+	ve.erase(ve.begin()); // åˆ é™¤ä¸€ä¸ª
 	printVector(ve);
-	//ve.erase(ve.begin(), ve.end()); // É¾³ýÈ«²¿
-	ve.clear(); // ºÍÉÏÒ»¾äÐ§¹ûÒ»Ñù
+	//ve.erase(ve.begin(), ve.end()); // åˆ é™¤å…¨éƒ¨
+	ve.clear(); // å’Œä¸Šä¸€å¥æ•ˆæžœä¸€æ ·
 	printVector(ve);
 
 	line();
 }
 
-void test02() {
-	
-	line();
-}
-
-void test03() {
-	
-	line();
-}
 
 int main() {
 	test01();
-	test02();
-	test03();
 	system("pause");
 	return 0;
-
-	// ÏÂ´Î¿´201¿Î
 }
