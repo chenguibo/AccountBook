@@ -5,8 +5,8 @@
 #include <set>
 using namespace std;
 
-// set/multiset£º²åÈëÔò×Ô¶¯ÅÅĞò¡£µ×²ã¶ş²æÊ÷ÊµÏÖ¡£
-// setÔªËØ²»ÔÊĞíÖØ¸´£¬multisetÔÊĞí¡£
+// set/multisetï¼šæ’å…¥åˆ™è‡ªåŠ¨æ’åºã€‚åº•å±‚äºŒå‰æ ‘å®ç°ã€‚
+// setå…ƒç´ ä¸å…è®¸é‡å¤ï¼Œmultisetå…è®¸ã€‚
 
 class Person {
 public:
@@ -53,7 +53,7 @@ void printSet2(set<int, MyCompare> &st) {
 
 void printSet3(set<Person, MyComparePerson> &st) {
 	for (set<Person, MyComparePerson>::iterator it = st.begin(); it != st.end(); it++) {
-		cout << "ĞÕÃû£º" << (*it).m_Name << " " << "ÄêÁä£º" << (*it).m_Age << endl;
+		cout << "å§“åï¼š" << (*it).m_Name << " " << "å¹´é¾„ï¼š" << (*it).m_Age << endl;
 	}
 }
 
@@ -67,25 +67,25 @@ void test01() {
 	st.insert(40);
 
 	printSet(st);
-	cout << "set´óĞ¡£º" << st.size() << endl; // 4
-	cout << "setÊÇ·ñÎª¿Õ£º" << st.empty() << endl; // 0
+	cout << "setå¤§å°ï¼š" << st.size() << endl; // 4
+	cout << "setæ˜¯å¦ä¸ºç©ºï¼š" << st.empty() << endl; // 0
 
 	if (st.find(40) != st.end()) {
-		cout << "ÕÒµ½40ÁË£¡" << endl;
+		cout << "æ‰¾åˆ°40äº†ï¼" << endl;
 	}
-	cout << "40ÔÚsetÖĞµÄÊıÁ¿£º" << st.count(40) << endl; // 1
+	cout << "40åœ¨setä¸­çš„æ•°é‡ï¼š" << st.count(40) << endl; // 1
 
 	set<int, MyCompare> st2;
 	st2.insert(10);
 	st2.insert(20);
 	st2.insert(30);
 	st2.insert(40);
-	printSet2(st2); // µ¹Ğò
+	printSet2(st2); // å€’åº
 
 
-	st.erase(10); // É¾³ıÖ¸¶¨Öµ
+	st.erase(10); // åˆ é™¤æŒ‡å®šå€¼
 	printSet(st);
-	st.clear(); // Çå¿Õ
+	st.clear(); // æ¸…ç©º
 	printSet(st); 
 
 	line();
@@ -93,7 +93,7 @@ void test01() {
 
 void test02() {
 	pair<string, int> p("cgb", 20);
-	cout << "ĞÕÃû£º" << p.first << " " << "ÄêÁä£º" << p.second << endl;
+	cout << "å§“åï¼š" << p.first << " " << "å¹´é¾„ï¼š" << p.second << endl;
 	cout << endl;
 	set<Person, MyComparePerson> st;
 	Person p1("ccc", 30);
@@ -102,7 +102,7 @@ void test02() {
 	st.insert(p1);
 	st.insert(p2);
 	st.insert(p3);
-	printSet3(st); // ÄêÁä´Ó´óµ½Ğ¡ÅÅ
+	printSet3(st); // å¹´é¾„ä»å¤§åˆ°å°æ’
 
 	line();
 }
@@ -114,5 +114,4 @@ int main() {
 	system("pause");
 	return 0;
 
-	// ÏÂ´Î¿´201¿Î
 }
