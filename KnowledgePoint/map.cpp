@@ -6,9 +6,9 @@
 #include <map>
 using namespace std;
 
-// map/multimap£ºËùÓĞÔªËØ¶¼ÊÇpair¡£²åÈëÔò¸ù¾İ¼üÖµ×Ô¶¯ÅÅĞò¡£µ×²ãºìºÚÊ÷ÊµÏÖ¡£
-// map²»ÔÊĞí¼üÖµ£¬multisetÔÊĞí¡£
-// unordered_map£¬µ×²ã¹şÏ£±íÊµÏÖ¡£ÄÚ²¿ÅÅĞòÊÇÎŞĞòµÄ¡£
+// map/multimapï¼šæ‰€æœ‰å…ƒç´ éƒ½æ˜¯pairã€‚æ’å…¥åˆ™æ ¹æ®é”®å€¼è‡ªåŠ¨æ’åºã€‚åº•å±‚çº¢é»‘æ ‘å®ç°ã€‚
+// mapä¸å…è®¸é”®å€¼ï¼Œmultisetå…è®¸ã€‚
+// unordered_mapï¼Œåº•å±‚å“ˆå¸Œè¡¨å®ç°ã€‚å†…éƒ¨æ’åºæ˜¯æ— åºçš„ã€‚
 
 class MyCompare{
 public:
@@ -40,17 +40,17 @@ void test01() {
 	mp.insert(pair<int, int>(3, 11));
 	mp.insert(pair<int, int>(2, 9));
 	mp.insert(pair<int, int>(1, 10));
-	printMap(mp); // ×Ô¶¯°´¼ü£¨key£©ÅÅĞò
+	printMap(mp); // è‡ªåŠ¨æŒ‰é”®ï¼ˆkeyï¼‰æ’åº
 
-	cout << "mpµÄ´óĞ¡£º" << mp.size() << endl; // 3
-	cout << "mpÊÇ·ñÎª¿Õ£º" << mp.empty() << endl; // 0
+	cout << "mpçš„å¤§å°ï¼š" << mp.size() << endl; // 3
+	cout << "mpæ˜¯å¦ä¸ºç©ºï¼š" << mp.empty() << endl; // 0
 
 	if (mp.find(3) != mp.end()) {
-		cout << "ÕÒµ½¼ü3ÁË£¡" << endl;
+		cout << "æ‰¾åˆ°é”®3äº†ï¼" << endl;
 	}
-	cout << "¼ü3µÄ¸öÊı£º" << mp.count(3) << endl; // Ö»ÓĞ0»ò1
+	cout << "é”®3çš„ä¸ªæ•°ï¼š" << mp.count(3) << endl; // åªæœ‰0æˆ–1
 
-	mp.erase(3); // É¾³ı¼üÎª3
+	mp.erase(3); // åˆ é™¤é”®ä¸º3
 	printMap(mp);
 	mp.clear();
 	printMap(mp);
@@ -60,7 +60,7 @@ void test01() {
 	mp2.insert(pair<int, int>(3, 11));
 	mp2.insert(pair<int, int>(2, 9));
 	mp2.insert(pair<int, int>(1, 10));
-	printMap2(mp2); // ×Ô¶¯°´¼ü£¨key£©µ¹Ğò
+	printMap2(mp2); // è‡ªåŠ¨æŒ‰é”®ï¼ˆkeyï¼‰å€’åº
 
 	line();
 }
@@ -77,6 +77,4 @@ int main() {
 	test02();
 	system("pause");
 	return 0;
-
-	// ÏÂ´Î¿´201¿Î set map¿´ÍêÁË
 }
